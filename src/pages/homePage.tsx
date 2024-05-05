@@ -1,10 +1,42 @@
-export default function HomePage({name}: {name:string}) {
+import { Experience, Header, Intro } from "dev-portfolio";
+
+const introParagraphs = `
+    Hi there, welcome to my portfolio!
+
+    I am currently a SDE II at Prime Video sports, doing backend work for Prime Video Sports customer experience.
+`;
+
+export default function HomePage({title, resumeUrl}: {title:string, resumeUrl: string}) {
+    const historyList = [
+        {
+            startDate: 'May 2021',
+            endDate: 'Present',
+            title: 'Software Development Engineer',
+            description: 'SDE II at Prime Video Sports'
+        },
+        {
+            startDate: 'August 2016',
+            endDate: 'June 2019',
+            title: 'Math Teacher',
+            description: 'High School Math Teacher'
+        }
+    ]
     return (
-        <div className="App">
-            <header className="App-header">
-            <p> Welcome to {name}'s portfolio! </p>
-            <a href="https://drive.google.com/file/d/1860ZnFmtkpmGmeNH6JTq1FAwHHAHlYpz/view?usp=sharing">Link to resume</a>
-            </header>
-        </div>
+        <>
+            <Intro
+                id='intro'
+                title={title}
+                shortIntro="Former math teacher, now software engineer."
+                description={introParagraphs} 
+            />
+            <Experience
+                id='experience'
+                title='Experience'
+                textAlign='left'
+                theme='basic'
+                shape='round-square'
+                historyList={historyList} 
+            />
+        </>
     );
 }
