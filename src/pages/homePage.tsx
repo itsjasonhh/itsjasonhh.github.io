@@ -1,12 +1,14 @@
-import { Experience, Header, Intro } from "dev-portfolio";
+import { Experience, Intro } from "dev-portfolio";
 
 const introParagraphs = `
     Hi there, welcome to my portfolio!
 
-    I am currently a SDE II at Prime Video sports, doing backend work for Prime Video Sports customer experience.
+    I am currently a SDE II at Prime Video Sports, doing backend work for Prime Video Sports customer experience. I have extensive experience building microservices on AWS infrastructure.
+
+    I designed the NextUp experience for Prime Video Sports. Each week, we successfully transferred millions of Thursday Night Football watchers to other Prime Video content.
 `;
 
-export default function HomePage({title, resumeUrl}: {title:string, resumeUrl: string}) {
+export default function HomePage({ title }: { title:string }) {
     const historyList = [
         {
             startDate: 'May 2021',
