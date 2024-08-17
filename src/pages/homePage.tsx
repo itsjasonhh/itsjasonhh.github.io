@@ -1,4 +1,4 @@
-import { Experience, Intro } from "dev-portfolio";
+import { Experience, Gallery, Intro } from "dev-portfolio";
 
 const introParagraphs = `
     Hi there, welcome to my portfolio!
@@ -28,7 +28,7 @@ export default function HomePage({ title }: { title:string }) {
             <Intro
                 id='intro'
                 title={title}
-                shortIntro="Former math teacher, now software engineer."
+                shortIntro="Former math teacher, now Emmy award-winning software engineer."
                 description={introParagraphs} 
             />
             <Experience
@@ -39,6 +39,15 @@ export default function HomePage({ title }: { title:string }) {
                 shape='round-square'
                 historyList={historyList} 
             />
+            <Gallery
+                id='gallery'
+                column={3}
+                gap='normal'
+            >
+                <img src='https://drive.google.com/thumbnail?id=1rpFHpMIRkKPjZX4bO-G-G654nTU6wTEf&sz=s400'/>
+                <img src='https://drive.google.com/thumbnail?id=1-q8JRQDwHv0VUScV0JfNXX_nHA0GmFzx&sz=s400'/>
+                <img src='https://drive.google.com/thumbnail?id=1syvis5n9M911qliut53Q-xZaiRvkpdJo&sz=s400'/>
+            </Gallery>
         </>
     );
 }
